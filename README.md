@@ -2,6 +2,8 @@
 
 # ZhuaTech InventoryAI
 
+[简体中文](README.md) | [English](README.en.md)
+
 ### 智能库存健康、补货与滞销处置社区版
 
 [知华科技官网](https://www.zhuatech.cn/) · 上海如静知华信息科技有限公司
