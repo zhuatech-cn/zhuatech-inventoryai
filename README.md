@@ -1,5 +1,9 @@
 <div align="center">
 
+## 本次功能更新：库存ABC价值分层
+
+按年用量乘单位成本排序，累计价值占比生成ABC分类，识别重点物料；按分类前累计份额划分80%与95%边界，不直接生成补货单。 登录后从「业务计算工具」进入，支持真实后端校验与结果导出。详见[接口、示例与边界说明](docs/AI_BUSINESS_UPGRADE_20261023.md)。本次不改变既有许可及联系方式。
+
 # ZhuaTech InventoryAI
 
 [简体中文](README.md) | [English](README.en.md)

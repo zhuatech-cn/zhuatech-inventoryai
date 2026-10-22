@@ -1,5 +1,9 @@
 [简体中文](README.md) | **English**
 
+## Functional update: ABC inventory value classification
+
+Classifies inventory by annual consumption value using stable descending order and cumulative 80/95 percent boundaries, including explicit zero-value behavior. Available to signed-in users with editable inputs, explicit validation and JSON export. See [API, examples and limitations](docs/AI_BUSINESS_UPGRADE_20261023.md). No external model calls or automatic business changes. Existing license and contact details are retained.
+
 # ZhuaTech InventoryAI
 
 > A source-available enterprise project by [ZhuaTech](https://www.zhuatech.cn/) for supply chain, procurement, order, warehouse, and logistics operations.
