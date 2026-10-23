@@ -1,0 +1,71 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "REVIEW",
+      "safetyStock": "#12",
+      "reorderPoint": "#112",
+      "replenishmentGap": "#22"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "onHand": "102"
+    },
+    "expected": {
+      "decision": "PASS",
+      "replenishmentGap": "#0"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "leadDays": "0"
+    },
+    "expected": {
+      "safetyStock": "#0",
+      "reorderPoint": "#0",
+      "decision": "PASS"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "dailyStdDev": "0"
+    },
+    "expected": {
+      "safetyStock": "#0",
+      "replenishmentGap": "#10"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "reserved": "81"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "zFactor": "0"
+    },
+    "expected": {
+      "safetyStock": "#0"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "leadDays": "4",
+      "dailyStdDev": "5",
+      "zFactor": "2"
+    },
+    "expected": {
+      "safetyStock": "#20",
+      "reorderPoint": "#100"
+    },
+    "error": false
+  }
+]

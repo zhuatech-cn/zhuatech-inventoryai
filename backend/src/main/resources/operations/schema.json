@@ -1,0 +1,106 @@
+{
+  "slug": "inventoryai",
+  "title": "补货点与在途库存净缺口",
+  "fields": [
+    {
+      "key": "id",
+      "label": "记录编号",
+      "type": "ID"
+    },
+    {
+      "key": "dailyDemand",
+      "label": "日均需求件",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "leadDays",
+      "label": "提前期天",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "dailyStdDev",
+      "label": "日需求标准差件",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "zFactor",
+      "label": "服务系数z",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "10"
+    },
+    {
+      "key": "onHand",
+      "label": "现存件数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "inbound",
+      "label": "有效在途件数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "reserved",
+      "label": "已预留件数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    }
+  ],
+  "columns": [
+    {
+      "key": "safetyStock",
+      "label": "安全库存件"
+    },
+    {
+      "key": "reorderPoint",
+      "label": "补货点件"
+    },
+    {
+      "key": "inventoryPosition",
+      "label": "净库存位置件"
+    },
+    {
+      "key": "replenishmentGap",
+      "label": "补货缺口件"
+    }
+  ],
+  "description": "按日需求、提前期和需求标准差计算安全库存及补货点，扣除预留后计入在途库存，整件需求向上取整。不生成采购订单。",
+  "owner": "上海如静知华信息科技有限公司",
+  "website": "https://www.zhuatech.cn/",
+  "authorization": "商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。",
+  "version": 1,
+  "notes": "输入均须为已获授权的同口径数据。金额固定人民币元；比例为百分数。核算结果只用于复核，未审批、未写库、未发起外部调用，也未触发付款、签名、资料销毁或设备控制。建议不构成法律、安全、会计或碳核证结论。",
+  "sample": {
+    "asOf": "2026-10-23",
+    "records": [
+      {
+        "id": "ITEM-001",
+        "dailyDemand": "20",
+        "leadDays": "5",
+        "dailyStdDev": "3",
+        "zFactor": "1.65",
+        "onHand": "80",
+        "inbound": "20",
+        "reserved": "10"
+      }
+    ]
+  }
+}
