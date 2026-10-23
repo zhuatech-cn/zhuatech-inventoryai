@@ -72,3 +72,9 @@ SEO：智能库存、库存优化、AI 补货、滞销库存、临期管理、Ja
 ## 企业级智能补货发布
 
 新增 `POST /api/enterprise/inventoryai/replenishment-plan-release`，覆盖库存、供应、提前期、安全库存、预算、风险、审批和撤回，返回 `RELEASE / PLANNER_REVIEW / BLOCKED`。详见 [补货发布说明](docs/ENTERPRISE_REPLENISHMENT_RELEASE.md)。
+
+## 输入对照与版本化快照
+
+在既有「补货点与在途库存净缺口」基础上，新增 `/comparison.html`：基准与候选两组数据都由当前真实算法重算，按编号展示新增、移除、逐字段变化和精确数值差，支持筛选、分页和全量导出。原核算入口可导出输入快照，对照页经后端完整校验后整体导入；失败不覆盖当前输入。
+
+快照区分项目、字段契约及算法版本。建议较宽松不代表风险已下降，输入摘要不是签名；操作人和时间仅为响应元数据，不是持久化审计。本次未新增模型调用或业务写入，也不代表全系统生产认证。详见[输入对照操作与接口说明](docs/INPUT-COMPARISON.md)。
